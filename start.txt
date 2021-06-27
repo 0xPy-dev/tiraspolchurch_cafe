@@ -1,0 +1,25 @@
+1. Create or clone git
+
+# Create git
+  bash# rm -rf .git
+  bash# git init
+  bash# git add ./
+  bash# git commit -m "blablabla"
+  bash# git branch -M main
+  bash# git remote add origin <git-link repo>
+  bash# git push -u origin main
+
+2. Check Procfile, requirements.txt, runtime.txt
+3. Install heroku
+   bash# snap install heroku
+   bash# heroku login
+4. Change dir to your repo dir
+   bash# cd <your repo dir>
+5. Create new app
+   bash# heroku create <your name>
+   bash# git push heroku main
+   bash# heroku ps:scale -<your type proc>=1 -a <your name> # See type proc in Procfile
+   bash# heroku open -a <your name>
+
+6. If you want delete your app:
+   heroku apps:destroy <your name> --confirm="<your name>"
